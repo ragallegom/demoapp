@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Symfony App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My Symfony App</h1>
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    <footer>
+        <small>&copy; {{ "now"|date("Y") }} My Symfony App</small>
+    </footer>
+</body>
+</html>
