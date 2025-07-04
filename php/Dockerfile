@@ -9,4 +9,8 @@ RUN apt-get update && apt-get install -y \
 # Instalar Composer (gestor de dependencias de PHP)
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Instalar Symfony CLI
+RUN wget https://get.symfony.com/cli/installer -O - | bash \
+    && mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
+
 WORKDIR /var/www/html
